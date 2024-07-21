@@ -1,0 +1,11 @@
+services:
+  sphinx-custom:
+    build: .
+    container_name: ${COMPOSE_PROJECT_NAME}
+    volumes:
+      - type: bind
+        source: ./docs/
+        target: /docs/
+        read_only: false
+    ports:
+      - "8000:8000"
