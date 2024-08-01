@@ -5,7 +5,7 @@ FROM sphinxdoc/sphinx-latexpdf:latest
 
 # PlantUML用にJavaなどをインストール
 RUN apt-get update \
-	&& apt-get install -y openjdk-17-jre-headless wget texlive-font-utils
+	&& apt-get install -y openjdk-17-jre-headless wget texlive-font-utils fonts-noto-cjk fonts-noto-cjk-extra
 
 ## Mermaid用にchromiumなどをインストール
 RUN apt-get install -y npm chromium

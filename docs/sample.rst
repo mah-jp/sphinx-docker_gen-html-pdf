@@ -22,6 +22,8 @@ PlantUML記法の例
 .. plantuml::
 
 	@startuml
+		!include skinparam.puml
+
 		participant Participant as Foo
 		actor       Actor       as Foo1
 		boundary    Boundary    as Foo2
@@ -42,10 +44,22 @@ PlantUML記法の例
 Mermaid記法の例
 ====================
 
+- シーケンスダイアグラム: https://mermaid.js.org/syntax/sequenceDiagram.html
+
+.. mermaid::
+
+	%%{init:{'themeVariables':{'fontFamily':'Noto Sans CJK JP'}}}%%
+	sequenceDiagram
+		participant Alice
+		participant Bob
+		Alice->>Bob: Hi Bob
+		Bob->>Alice: Hi Alice
+
 - ガントダイアグラム: https://mermaid.js.org/syntax/gantt.html
 
 .. mermaid::
 
+	%%{init:{'themeVariables':{'fontFamily':'Noto Sans CJK JP'}}}%%
 	gantt
 		title A Gantt Diagram
 		dateFormat YYYY-MM-DD
