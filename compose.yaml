@@ -1,7 +1,6 @@
 services:
   sphinx-custom:
     build: .
-    container_name: ${COMPOSE_PROJECT_NAME}
     volumes:
       - type: bind
         source: ./docs/
